@@ -18,22 +18,22 @@ export default function Feedback({ feedback }: FeedbackProps) {
             <div className="flex h-8 w-full">
                 <div
                     style={{ width: `${positivePercentaje}%` }}
-                    className="h-full bg-positive transition-[width] duration-500"
+                    className="h-full bg-green-500 transition-[width] duration-500"
                 />
                 <div
                     style={{ width: `${neutralPercentaje}%` }}
-                    className="h-full bg-neutral transition-[width] duration-500"
+                    className="h-full bg-black   transition-[width] duration-500"
                 />
                 <div
                     style={{ width: `${negativePercentaje}%` }}
-                    className="h-full bg-negative transition-[width] duration-500"
+                    className="h-full bg-red-600  transition-[width] duration-500"
                 />
             </div>
 
             <ul className="flex w-full list-disc justify-evenly text-sm font-medium">
-                <li className="text-positive-dark">{`${positivePercentaje}% (${positive})`}</li>
-                <li className="text-neutral-dark">{`${neutralPercentaje}% (${neutral})`}</li>
-                <li className="text-negative-dark">{`${negativePercentaje}% (${negative})`}</li>
+                <li className="text-positive-dark bg-green-500">{`${positivePercentaje}% (${positive})`}</li>
+                <li className="text-neutral-dark bg-black">{`${neutralPercentaje}% (${neutral})`}</li>
+                <li className="text-negative-dark bg-red-600">{`${negativePercentaje}% (${negative})`}</li>
             </ul>
         </div>
     );

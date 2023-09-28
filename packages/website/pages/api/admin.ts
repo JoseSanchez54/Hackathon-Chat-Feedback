@@ -5,7 +5,7 @@ import type { APIError, PostAdmin, ExpectedAdminBody } from "types/api";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse<APIError | PostAdmin>) {
     const { username, password } = <ExpectedAdminBody>req.body;
-    console.log(username)
+
     const method = <HTTPMethod>req.method;
 
     if (method !== HTTPMethod.POST) {
